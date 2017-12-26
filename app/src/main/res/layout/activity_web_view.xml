@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cd_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F5F5"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/status_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/status_bar_view"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/iv_web_title_bar_back"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:padding="14.5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/title_back_icon"/>
+
+        <ImageView
+            android:id="@+id/iv_web_title_bar_close"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/iv_web_title_bar_back"
+            android:padding="13.5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_titlebar_close"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_web_title_bar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="90dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#FF686371"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/iv_web_title_bar_right_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_title_bar_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:maxWidth="100dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:singleLine="true"
+            android:textColor="#FF999999"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f1eef6"/>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/cd_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title_bar"/>
+    <!--<WebView-->
+    <!--android:id="@+id/cd_web_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/rl_title_bar"/>-->
+
+    <ProgressBar
+        android:id="@+id/webview_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_below="@+id/rl_title_bar"
+        android:progressDrawable="@drawable/webview_progress_style"/>
+
+</RelativeLayout>

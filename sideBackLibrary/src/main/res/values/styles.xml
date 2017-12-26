@@ -1,0 +1,11 @@
+<resources>
+
+    <!--parent="@android:style/Animation.Activity"-->
+    <style name="fade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/sback_open_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/sback_open_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/sback_close_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/sback_close_out</item>
+    </style>
+
+</resources>
